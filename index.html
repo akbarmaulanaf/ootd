@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penentu Outfit</title>
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Language selector -->
+    <div class="language-selector">
+      <img id="selectedFlag" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/id.svg" alt="Indonesian Flag" />
+      <select id="languageSelect" onchange="changeLanguage()">
+        <option value="id" selected>Indonesia</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+
+    <div class="layout-container">
+      <!-- Main content area - contains the outfit picker and clothing lists -->
+      <div class="main-section">
+        <!-- Outfit picker section -->
+        <div class="container-penentuoutfit">
+          <h2 data-translate="title">Penentu Outfit</h2>
+          <button class="btn-outfit" onclick="tentukanOutfit()" data-translate="pickButton">Tentukan Outfit</button>
+          <div class="result" id="hasil"></div>
+          <div class="outfit-result" id="outfitImages"></div>
+        </div>
+
+        <!-- Clothing lists display section -->
+        <div class="container-daftarbajucelana">
+          <h3 data-translate="shirtList">Daftar Baju</h3>
+          <div class="image-container" id="bajuList"></div>
+          <h3 data-translate="pantsList">Daftar Celana</h3>
+          <div class="image-container" id="celanaList"></div>
+        </div>
+      </div>
+
+      <!-- Sidebar section - contains the forms to add new items -->
+      <div class="side-section">
+        <div class="container-tambahoutfit">
+          <h2 data-translate="addOutfit">Tambah Outfit</h2>
+          <!-- Form to add shirts -->
+          <div class="form-group">
+            <label data-translate="addShirt">Tambah Baju:</label>
+            <input type="file" id="uploadBaju" accept="image/*" multiple />
+            <button class="btn-add" onclick="tambahBaju()" data-translate="addShirtButton">Tambah Baju</button>
+          </div>
+          <!-- Form to add pants -->
+          <div class="form-group">
+            <label data-translate="addPants">Tambah Celana:</label>
+            <input type="file" id="uploadCelana" accept="image/*" multiple />
+            <button class="btn-add" onclick="tambahCelana()" data-translate="addPantsButton">Tambah Celana</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
