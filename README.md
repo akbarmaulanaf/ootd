@@ -38,7 +38,7 @@ OOTD is a simple web application that helps you decide what to wear each day. No
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/OOTD.git
+   git clone https://github.com/akbarmaulanaf/OOTD.git
    cd OOTD
    ```
 
